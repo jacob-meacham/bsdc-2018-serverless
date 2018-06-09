@@ -1,7 +1,5 @@
 ## Introduction
-This is the code and documentation that accompanies the Big Sky Dev Con 2018 presentation "Building a Serverless Backend"
-
-Code can be found at [https://github.com/jacob-meacham/bsdc-2018-serverless](https://github.com/jacob-meacham/bsdc-2018-serverless)
+This is the code and documentation that accompanies the Big Sky Dev Con 2018 presentation "Building a Serverless Backend". During this presentation, we built an SMS/MMS-based meme generator service.
 
 ## Quick Start
 First, put your twilio creds into  4-memegen/config/deploy.yml. Then:
