@@ -1,0 +1,46 @@
+service: bsdc-2018-memegen
+
+plugins:
+  - serverless-plugin-deploy-environment
+  - serverless-offline
+  - serverless-offline-sns
+  - serverless-plugin-git-variables
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-east-1
+  stage: ${opt:stage}
+  role: arn:aws:iam::770772978315:role/bsdc-2018-memegen-lambda
+  memorySize: 128
+  timeout: 10
+
+package:
+  include:
+    - images/
+    - lib/
+
+custom:
+  deploy:
+    variables: ${file(config/variables.yml)}
+    environments: ${file(config/deploy.yml)}
+
+functions:
+  createMeme:
+    description: Create a meme. COMMIT ${git:sha1}, BRANCH ${git:branch}
+    handler: handler.createMeme
+    events:
+      - http:
+          path: meme
+          method: get
+
+  sendMeme:
+    description: Send a meme. COMMIT ${git:sha1}, BRANCH ${git:branch}
+    handler: handler.sendMeme
+    events:
+      - sns: arn:aws:sns:us-east-1:770772978315:bsdc-2018-memegen-request-topic-production # TODO, make this dynamic
+      # - sns:
+      #   arn: ${self:deployVariables.snsTopicArn} # TODO, make this work in dev and prod.
+      #   topicName: ${self:deployVariables.snsTopicName} # TODO, make this work in dev and prod.
+
+resources: ${file(config/cloudformation.yml)}

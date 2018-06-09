@@ -1,0 +1,15 @@
+---
+default:
+  AWS_USE_SSL: true
+  S3_BUCKET: ${self:deployVariables.bucketName}
+  SNS_TOPIC: ${self:deployVariables.snsTopicArn}
+  SQS_QUEUE_URL: ${self:deployVariables.sqsQueueUrl}
+  TWILIO_ACCOUNT_SID: FAKE
+  TWILIO_ACCOUNT_AUTH_TOKEN: FAKE
+
+local:
+  AWS_USE_SSL: false
+  S3_FORCE_PATH_STYLE: true
+  SNS_ENDPOINT: http://localhost:4002
+  SQS_ENDPOINT: http://localhost:4576
+  S3_ENDPOINT: http://localhost:4572

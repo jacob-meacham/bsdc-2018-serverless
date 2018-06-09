@@ -1,0 +1,9 @@
+.DS_Store
+/node_modules/
+
+# Serverless directories
+.serverless
+.tmp
+tmp/
+
+backend-infrastructure/
