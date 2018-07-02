@@ -7,6 +7,8 @@ Code can be found at [https://github.com/jacob-meacham/bsdc-2018-serverless](htt
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/LLWfCRh0hIlB9J" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/JacobMeacham/big-sky-dev-con-2018-building-a-serverless-backend-103051655" title="Big Sky Dev Con 2018 - Building a Serverless Backend" target="_blank">Big Sky Dev Con 2018 - Building a Serverless Backend</a> </strong> from <strong><a href="https://www.slideshare.net/JacobMeacham" target="_blank">Jacob Meacham</a></strong> </div>
 
+Videos embedded in the presentation are [here](https://www.dropbox.com/sh/x0srun1blqa8wfa/AACdbhhDgrwzXvw3m7cMZBlpa?dl=0)
+
 ## Quick Start
 First, put your twilio creds into  4-memegen/config/deploy.yml. Then:
 ```
