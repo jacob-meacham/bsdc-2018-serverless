@@ -26,7 +26,7 @@
     "serverless-plugin-offline-kinesis-events": "1.1.1"
   },
   "dependencies": {
-    "aws-sdk": "2.251.1",
+    "aws-sdk": "2.814.0",
     "memecanvas": "https://github.com/jacob-meacham/memecanvas.git#17edf1a3a2a6f81176cf745666ae806fdf766e5d",
     "request": "2.87.0",
     "twilio": "3.17.2",
