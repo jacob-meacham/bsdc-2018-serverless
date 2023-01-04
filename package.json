@@ -18,7 +18,7 @@
   "homepage": "https://github.com/jacob-meacham/bsdc-2018-serverless#readme",
   "devDependencies": {
     "serverless": "1.27.3",
-    "serverless-offline": "3.25.2",
+    "serverless-offline": "3.33.0",
     "serverless-offline-sns": "0.45.0",
     "serverless-plugin-cloudwatch-sumologic": "0.0.10",
     "serverless-plugin-deploy-environment": "1.1.0",
